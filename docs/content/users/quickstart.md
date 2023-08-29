@@ -285,6 +285,31 @@ Visit the [Moodle Admin Quick Guide](https://docs.moodle.org/400/en/Admin_quick_
 !!!tip
     Moodle relies on a periodic cron job—don’t forget to set that up! See [ddev/ddev-cron](https://github.com/ddev/ddev-cron).
 
+## ProcessWire
+
+Use a new or existing Composer project, or clone a Git repository.
+
+=== "Composer"
+
+    ```bash
+    mkdir my-processwire-app
+    cd my-processwire-app
+    composer create-project processwire/processwire .
+    ddev config --php-version=8.1 --webserver-type=apache-fpm
+    ddev start
+    ddev launch
+    ```
+
+=== "Git Clone"
+
+    ```bash
+    git clone https://github.com/processwire/processwire.git my-processwire-app
+    cd my-processwire-app
+    ddev config --php-version=8.1 --webserver-type=apache-fpm
+    ddev start
+    ddev launch
+    ```
+    
 ## Python/Flask (Experimental)
 
 ```bash
